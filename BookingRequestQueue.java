@@ -1,3 +1,25 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class BookingRequestQueue {
+private Queue<Reservation> bookingQueue;
+
+public BookingRequestQueue() {
+bookingQueue=new LinkedList<>();
+}
+
+public void addBookingRequest(Reservation reservation) {
+bookingQueue.add(reservation);
+}
+
+public void displayBookingRequests() {
+for(Reservation r:bookingQueue) {
+r.displayReservation();
+System.out.println();
+}
+}
+}
+
 public class UseCase5BookingRequestQueue {
 public static void main(String[] args) {
 BookingRequestQueue requestQueue=new BookingRequestQueue();
@@ -15,3 +37,4 @@ System.out.println();
 requestQueue.displayBookingRequests();
 }
 }
+
